@@ -306,7 +306,7 @@ const KronosisLanding = () => {
 
 
 
-      <footer id="contact" className="pt-14 pb-6 bg-purple-700 text-white">
+      <footer id="contact" className="pt-14 pb-6 bg-[#5F0195] text-white">
         <div className="container mx-auto px-8">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Contact Section */}
