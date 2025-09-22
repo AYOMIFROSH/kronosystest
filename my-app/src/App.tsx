@@ -9,9 +9,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<KronosisLanding />} />
 
-        {/* add more routes here as needed, e.g.
-            <Route path="/products" element={<ProductsPage />} />
-        */}
+
       </Routes>
     </BrowserRouter>
   );
