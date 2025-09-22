@@ -173,24 +173,28 @@ const KronosisLanding = () => {
         </div>
     </section>
 
-    <section className="py-20 bg-gray-800 text-white">
+    {/* Value Proposition, Vision & Mission Cards */}
+    <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-8">Value Proposition</h2>
-                <p className="text-gray-300 leading-relaxed mb-16">
-                    At Kronosys Limited, we bridge the gap between technology and real-world impact. Our value lies in combining cutting-edge innovation with local market insight to deliver solutions that are not only advanced and secure but also relevant, scalable, and sustainable for businesses and communities in Africa and beyond.
-                </p>
-                
-                <div className="border-t border-gray-600 pt-16 mb-16">
-                    <h2 className="text-3xl font-bold mb-8">Our Vision</h2>
-                    <p className="text-gray-300 leading-relaxed">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div className="text-4xl mb-4">💎</div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Value Proposition</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                        At Kronosys Limited, we bridge the gap between technology and real-world impact. Our value lies in combining cutting-edge innovation with local market insight to deliver solutions that are not only advanced and secure but also relevant, scalable, and sustainable for businesses and communities in Africa and beyond.
+                    </p>
+                </div>
+                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div className="text-4xl mb-4">🚀</div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Our Vision</h3>
+                    <p className="text-gray-700 leading-relaxed">
                         To become a global leader in driving technological innovation from Africa, setting the standard for intelligent systems that solve complex challenges and shape a smarter future.
                     </p>
                 </div>
-                
-                <div className="border-t border-gray-600 pt-16">
-                    <h2 className="text-3xl font-bold mb-8">Our Mission</h2>
-                    <p className="text-gray-300 leading-relaxed">
+                <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div className="text-4xl mb-4">🎯</div>
+                    <h3 className="text-2xl font-bold text-purple-600 mb-4">Our Mission</h3>
+                    <p className="text-gray-700 leading-relaxed">
                         To harness the power of Artificial Intelligence, Robotics, and emerging technologies to create intelligent, secure, and sustainable solutions that transform industries and improve lives.
                     </p>
                 </div>
@@ -198,31 +202,38 @@ const KronosisLanding = () => {
         </div>
     </section>
 
+    {/* Core Values Cards */}
     <section className="py-20 purple-gradient text-white">
         <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div className="text-3xl mb-3">💡</div>
                     <h3 className="text-xl font-bold mb-3">Innovation</h3>
                     <p className="text-white/90">We embrace creativity and cutting-edge technologies to design impactful solutions.</p>
                 </div>
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div className="text-3xl mb-3">🤝</div>
                     <h3 className="text-xl font-bold mb-3">Integrity</h3>
                     <p className="text-white/90">We uphold transparency, honesty, and ethical standards in all our dealings.</p>
                 </div>
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div className="text-3xl mb-3">⭐</div>
                     <h3 className="text-xl font-bold mb-3">Excellence</h3>
                     <p className="text-white/90">We deliver superior quality solutions that meet and exceed client expectations.</p>
                 </div>
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div className="text-3xl mb-3">👥</div>
                     <h3 className="text-xl font-bold mb-3">Collaboration</h3>
                     <p className="text-white/90">We work with partners, clients, and communities to co-create value.</p>
                 </div>
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div className="text-3xl mb-3">🌱</div>
                     <h3 className="text-xl font-bold mb-3">Sustainability</h3>
                     <p className="text-white/90">We are committed to solutions that positively impact people, society, and the environment.</p>
                 </div>
-                <div>
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 hover:bg-white/20 transition">
+                    <div className="text-3xl mb-3">🔒</div>
                     <h3 className="text-xl font-bold mb-3">Security</h3>
                     <p className="text-white/90">We prioritize trust, data protection, and safety in all our technological offerings.</p>
                 </div>
@@ -274,7 +285,7 @@ const KronosisLanding = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <p className="text-gray-700 mb-6 leading-relaxed">
-                        Kronos Track is an intelligent security-first platform designed to revolutionize transport operations in Abia State through:
+                      Kronos Track is an intelligent security-first platform designed to revolutionize transport operations in Nigeria and Africa through operational structure, user behaviour and enforcement                     
                     </p>
                     <ul className="space-y-3 mb-6">
                         <li className="flex items-start">
@@ -296,9 +307,6 @@ const KronosisLanding = () => {
                     </ul>
                     <p className="text-gray-700 mb-6 leading-relaxed">
                         Built around a customized Android device and supported by a centralized admin dashboard, Kronos Track ensures that transport agencies, government regulators, ticketers, and commercial drivers operate in a connected, transparent, and accountable ecosystem.
-                    </p>
-                    <p className="text-gray-700 mb-8 leading-relaxed">
-                        Unlike systems modeled after Lagos' LAMATA, Kronos Track is uniquely tailored to Abia State's operational structure, user behavior, and enforcement protocols.
                     </p>
                     <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition">
                         Click Here
