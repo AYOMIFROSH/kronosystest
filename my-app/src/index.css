@@ -12,6 +12,10 @@
   background: linear-gradient(to right, #5F0195, #5F0195);
 }
 
+.auth-gradient {
+background: linear-gradient(to right, #5F0195, #5F0195);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
