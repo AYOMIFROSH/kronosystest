@@ -135,15 +135,6 @@ const TicketerDashboard = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <p className="text-gray-600">
-          Manage and validate user tickets
-        </p>
-      </motion.div>
-
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
@@ -323,11 +314,10 @@ const TicketerDashboard = () => {
                           handleValidateTicket(ticket.id, ticket.isValidated)
                         }
                         disabled={isUpdating}
-                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${
-                          ticket.isValidated
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition ${ticket.isValidated
                             ? "bg-red-100 text-red-700 hover:bg-red-200"
                             : "bg-green-100 text-green-700 hover:bg-green-200"
-                        } disabled:opacity-50 disabled:cursor-not-allowed`}
+                          } disabled:opacity-50 disabled:cursor-not-allowed`}
                       >
                         {ticket.isValidated ? "Invalidate" : "Validate"}
                       </button>
