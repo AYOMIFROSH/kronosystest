@@ -33,6 +33,14 @@ const TicketerDashboard = () => {
     return () => window.removeEventListener("openCreateTicketModal", handleOpenModal);
   }, []);
 
+  // Clear error when modal closes
+  useEffect(() => {
+    if (!isCreateModalOpen) {
+      setError("");
+      setUserIdentifier("");
+    }
+  }, [isCreateModalOpen]);
+
   // Fetch tickets with optional userId filter
   const {
     data: ticketsData,
