@@ -23,7 +23,7 @@ import { devLog } from "../../utils/console";
 const TicketerDashboard = () => {
   const [searchUserId, setSearchUserId] = useState("");
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-  const [newUserId, setNewUserId] = useState("");
+  const [userIdentifier, setUserIdentifier] = useState("");
   const [error, setError] = useState("");
 
   // Listen for create ticket event from header
@@ -93,15 +93,23 @@ const TicketerDashboard = () => {
   const handleCreateTicket = async () => {
     setError("");
 
-    if (!newUserId || isNaN(parseInt(newUserId))) {
-      setError("Please enter a valid User ID");
+    if (!userIdentifier || userIdentifier.trim() === "") {
+      setError("Please enter a valid Email or RFID Tag");
       return;
     }
 
     try {
-      await createTicket({ userId: parseInt(newUserId) }).unwrap();
+      // Determine if input is email or RFID tag
+      const trimmedInput = userIdentifier.trim();
+      const isEmail = trimmedInput.includes("@");
+      
+      const requestBody = isEmail 
+        ? { email: trimmedInput }
+        : { rfidTag: trimmedInput };
+
+      await createTicket(requestBody).unwrap();
       setIsCreateModalOpen(false);
-      setNewUserId("");
+      setUserIdentifier("");
       devLog.log("Ticket created successfully");
     } catch (err: any) {
       devLog.error("Create ticket error:", err);
@@ -134,7 +142,6 @@ const TicketerDashboard = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
@@ -369,17 +376,17 @@ const TicketerDashboard = () => {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      User ID <span className="text-red-500">*</span>
+                      Email or RFID Tag <span className="text-red-500">*</span>
                     </label>
                     <input
-                      type="number"
-                      value={newUserId}
-                      onChange={(e) => setNewUserId(e.target.value)}
-                      placeholder="Enter user ID"
+                      type="text"
+                      value={userIdentifier}
+                      onChange={(e) => setUserIdentifier(e.target.value)}
+                      placeholder="Enter user email or RFID tag"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none text-base"
                     />
                     <p className="mt-2 text-xs text-gray-500">
-                      Enter the ID of the user you want to create a ticket for
+                      Enter the email or RFID tag of the user you want to create a ticket for
                     </p>
                   </div>
 

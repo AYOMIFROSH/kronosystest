@@ -33,7 +33,8 @@ export interface TicketsResponse {
 }
 
 export interface CreateTicketRequest {
-  userId: number;
+  email?: string;
+  rfidTag?: string;
 }
 
 export interface CreateTicketResponse {
